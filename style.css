@@ -7,14 +7,14 @@ body {
     color: #333;
 }
 
-.container {
+/* .container {
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
     background-color: #f5eeee;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
 
 h2, h3 {
     color: #333;
@@ -28,7 +28,8 @@ hr {
 
 /* Navbar Styles */
 .navbar {
-    background-color: #007bff;
+    height: 10vh;
+    background-color:rgba(248, 248, 248, 1);
     color: #e4d9d9;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -36,8 +37,10 @@ hr {
 
 .navbar .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    padding: 20px 70px ;
+    margin: auto;
 }
 
 .navbar-brand {
@@ -67,6 +70,40 @@ hr {
 
 .navbar-nav a:hover {
     background-color: #0056b3;
+}
+
+/* Search bar styling */
+.navbar-search {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    flex-grow: 1;
+    /* padding-left:20vw ; */
+    justify-content: center;
+}
+
+.navbar-search input[type="text"] {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 400px;
+    height: 3.5vh;
+}
+
+.navbar-search button {
+    padding: 5px 15px;
+    margin-left: 10px;
+    background-color: #FF6767;
+    color: white;
+    border: none;
+    border-radius:30px;
+    cursor: pointer;
+    height: 3.5vh;
+}
+
+.navbar-search button:hover {
+    background-color: #b63636;
 }
 
 /* Task Form Styles */

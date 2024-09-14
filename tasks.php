@@ -127,13 +127,23 @@ $stmt->close();
 <!-- Navbar -->
 <nav class="navbar">
     <div class="container">
+        <!-- Navbar Brand -->
         <a href="tasks.php" class="navbar-brand">Task Manager</a>
+
+        <!-- Search Bar -->
+        <form class="navbar-search" action="search.php" method="GET">
+            <input type="text" name="search_query" placeholder="Search tasks..." aria-label="Search">
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Navbar Links -->
         <ul class="navbar-nav">
             <li><a href="tasks.php">Home</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>
 </nav>
+
 
 <!-- Main Content -->
 <div class="container">
