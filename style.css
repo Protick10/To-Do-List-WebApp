@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f1f1;
+    background-color: #f8dede;
     margin: 0;
     padding: 0;
     color: #333;
@@ -45,7 +45,7 @@ hr {
 
 .navbar-brand {
     font-size: 24px;
-    color: #6b0f0f;
+    color: #FF6767;
     text-decoration: none;
     padding: 0 20px;
 }
@@ -62,14 +62,14 @@ hr {
 }
 
 .navbar-nav li a {
-    color: #130404;
+    color: #FF6767;
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 4px;
 }
 
 .navbar-nav a:hover {
-    background-color: #0056b3;
+    background-color: #aabdd1;
 }
 
 /* Search bar styling */
@@ -165,33 +165,78 @@ hr {
 }
 
 .task-item {
-    background-color: #f9f9f9;
+    background-color: #ede5e5;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 10px;
     margin-bottom: 10px;
     padding: 15px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 .task-view {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .task-header {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 10px;
+    font-family: sans-serif;
 }
 
 .task-body {
     margin-bottom: 10px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.task-body p:last-child {
+    font-size: 14px;
 }
 
 .task-footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+}
+
+.btns{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+.btns button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #FF6767;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+}
+
+.btns button:hover{
+    background-color: #ec5d5f;
+}
+
+.btns a{
+    padding: 9px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+
 }
 
 .task-footer input[type="checkbox"] {
@@ -238,4 +283,25 @@ hr {
 /* Hide edit form by default */
 .edit-form {
     display: none;
+}
+
+
+.containerr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.yourtasks{
+    display: flex;
+    flex-direction: column;
+    margin: 20PX 20px;
+    padding: 20px;
+    background-color: #f5eeee;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }

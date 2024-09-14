@@ -146,7 +146,8 @@ $stmt->close();
 
 
 <!-- Main Content -->
-<div class="container">
+<div class="containerr">
+    <div class="yourtasks">
     <h2>Your Tasks</h2>
 
     <?php if (!empty($errors)): ?>
@@ -158,30 +159,12 @@ $stmt->close();
     <?php endif; ?>
 
     <!-- Add Task Button -->
-    <button id="toggle-form-btn" class="btn" onclick="toggleForm()">Add Task</button>
+   
 
-    <!-- Add Task Form (Initially Hidden) -->
-    <form id="task-form" class="task-form" action="tasks.php" method="POST" style="display: none;">
-        <label for="task">Task:</label>
-        <input type="text" id="task" name="task" placeholder="Task title" required>
-
-        <label for="description">Description:</label>
-        <textarea id="description" name="description" placeholder="Task description" required></textarea>
-
-        <label for="due_date">Due Date:</label>
-        <input type="date" id="due_date" name="due_date" required>
-
-        <label for="due_time">Due Time:</label>
-        <input type="time" id="due_time" name="due_time" required>
-
-        <button class="btn add-btn" type="submit" name="add_task">Add Task</button>
-        <button type="button" class="btn cancel-btn" onclick="toggleForm()">Cancel</button>
-    </form>
-
-    <hr>
+    <!-- <hr> -->
 
     <!-- Task List -->
-    <h3>Task List</h3>
+    <!-- <h3>Task List</h3> -->
     <?php if (count($tasks) > 0): ?>
         <ul class="task-list">
             <?php foreach ($tasks as $task): ?>
@@ -195,9 +178,14 @@ $stmt->close();
                             <p>Due: <?php echo $task['due_date']; ?> at <?php echo $task['due_time']; ?></p>
                         </div>
                         <div class="task-footer">
+                            <span class="checkb">
                             <input type="checkbox" <?php if ($task['completed']) echo 'checked'; ?> disabled> Completed
+                            </span>
+                            <div class="btns">
                             <button class="btn edit-btn" onclick="toggleEditForm(<?php echo $task['id']; ?>)">Edit</button>
                             <a class="btn delete-btn" href="tasks.php?delete_task=<?php echo $task['id']; ?>" onclick="return confirm('Are you sure you want to delete this task?');">Delete</a>
+                            </div>
+                            
                         </div>
                     </div>
 
@@ -224,7 +212,27 @@ $stmt->close();
         <p>No tasks found.</p>
     <?php endif; ?>
 
-    <hr>
+    <button id="toggle-form-btn" class="btn" onclick="toggleForm()">Add Task</button>
+
+<!-- Add Task Form (Initially Hidden) -->
+<form id="task-form" class="task-form" action="tasks.php" method="POST" style="display: none;">
+    <label for="task">Task:</label>
+    <input type="text" id="task" name="task" placeholder="Task title" required>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" placeholder="Task description" required></textarea>
+
+    <label for="due_date">Due Date:</label>
+    <input type="date" id="due_date" name="due_date" required>
+
+    <label for="due_time">Due Time:</label>
+    <input type="time" id="due_time" name="due_time" required>
+
+    <button class="btn add-btn" type="submit" name="add_task">Add Task</button>
+    <button type="button" class="btn cancel-btn" onclick="toggleForm()">Cancel</button>
+</form>
+</div>
+    <!-- <hr> -->
 
     <!-- Completed Task History -->
     <h3>Completed Task History</h3>
