@@ -233,8 +233,8 @@ $stmt->close();
 </form>
 </div>
     <!-- <hr> -->
-
-    <!-- Completed Task History -->
+    <div class="cth">
+         <!-- Completed Task History -->
     <h3>Completed Task History</h3>
     <?php if (count($completed_tasks) > 0): ?>
         <ul class="task-list">
@@ -248,7 +248,7 @@ $stmt->close();
                             <p><?php echo htmlspecialchars($task['description']); ?></p>
                             <p>Due: <?php echo $task['due_date']; ?> at <?php echo $task['due_time']; ?></p>
                         </div>
-                        <div class="task-footer">
+                        <div class="task-footer2">
                             <input type="checkbox" checked disabled> Completed
                         </div>
                     </div>
@@ -258,7 +258,10 @@ $stmt->close();
     <?php else: ?>
         <p>No completed tasks found.</p>
     <?php endif; ?>
-</div>
+    </div>
+
+   
+<!-- </div> -->
 
 </body>
 </html>

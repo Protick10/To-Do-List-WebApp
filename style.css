@@ -367,3 +367,26 @@ hr {
     align-items: center;
     width: 50%;
 }
+
+
+.cth{
+    display: flex;
+    flex-direction: column;
+    margin: 20PX 20px;
+    padding: 20px;
+    background-color: #f5eeee;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+
+.task-footer2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
