@@ -283,9 +283,71 @@ hr {
 /* Hide edit form by default */
 .edit-form {
     display: none;
+    /* display: flex; */
+}
+
+.edit-form button {
+    margin-top: 10px;
+    background-color: #FF6767;
+}
+
+.edit-form button:hover {
+    background-color: #ec5d5f;
 }
 
 
+.btn{
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #FF6767;
+    transition: background-color 0.3s;
+    margin: 10px 10px;
+}
+
+
+
+.task-form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+    padding: 20px;
+    background-color: #f5eeee;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    /* width: 50%; */
+}
+
+.task-form input{
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.task-form textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.task-form button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #FF6767;
+    transition: background-color 0.3s;
+    margin: 10px 10px;
+}
+
+.task-form button:hover{
+    background-color: #ec5d5f;
+}
 .containerr{
     display: flex;
     flex-direction: column;

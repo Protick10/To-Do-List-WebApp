@@ -101,7 +101,7 @@ $stmt->close();
             var form = document.getElementById('task-form');
             var button = document.getElementById('toggle-form-btn');
             if (form.style.display === 'none' || form.style.display === '') {
-                form.style.display = 'block';
+                form.style.display = 'flex';
                 button.innerText = 'Cancel';
             } else {
                 form.style.display = 'none';
@@ -113,7 +113,7 @@ $stmt->close();
             const taskView = document.getElementById('task-view-' + taskId);
             const editForm = document.getElementById('edit-form-' + taskId);
             if (editForm.style.display === 'none' || editForm.style.display === '') {
-                editForm.style.display = 'block';
+                editForm.style.display = 'flex';
                 taskView.style.display = 'none';
             } else {
                 editForm.style.display = 'none';
